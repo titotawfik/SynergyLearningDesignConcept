@@ -1,0 +1,60 @@
+
+// theme-color-variables
+$primary  :     #562877;
+$secondary:     #e6007e;
+$third    :     #92278f;
+$forth    :     #eee9f1;
+
+//body colours 
+$body-color:   #343a40;
+$body-bg:      #fff;
+
+//theme-colors-map
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "third":      $third, 
+  "forth" :     $forth
+);
+
+// Typography
+$font-family-sans-serif:      "Helvetica Neue","Helvetica","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$font-size-base:              1rem; 
+$font-size-sm:                $font-size-base * .875;
+$font-size-lg:                $font-size-base * 1.25;
+
+//Heading
+$headings-font-family:        "Georgia","Helvetica Neue","Helvetica","Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$headings-color:              $primary;
+$h1-font-size:                $font-size-base * 2.3;
+$h2-font-size:                $font-size-base * 1.85;
+$h3-font-size:                $font-size-base * 1.5;
+$h4-font-size:                $font-size-base * 1.25;
+$h5-font-size:                $font-size-base * 1.15;
+$h6-font-size:                $font-size-base;
+
+//Nav
+$nav-link-padding-y:                1.2rem;
+$nav-link-padding-x:                1.7rem;
+$nav-link-font-size:                1rem;
+$nav-link-font-weight:              400;
+$nav-link-color:                    $primary;
+$nav-link-hover-color:              $secondary;
+$nav-link-hover-border:             3px solid $secondary;
+$nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+
+//Navbar
+$navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$primary}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-light-toggler-border-color: rgba($primary, .1);
+$navbar-light-color:                rgba($primary, .55);
+$navbar-light-hover-color:          rgba($secondary, .7);
+$navbar-light-active-color:         rgba($secondary, .9);
+
+//Button
+$border-radius:               0;
+$btn-padding-y:               .6rem;
+$btn-padding-x:               1rem;
+$btn-font-size:               1rem;
+$btn-line-height:             1.2;
+$btn-white-space:             nowrap; 
+

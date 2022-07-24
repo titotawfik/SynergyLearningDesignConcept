@@ -1,0 +1,123 @@
+
+
+//card var
+$card-bg:                           $white;
+$card-height:                       auto;
+$card-spacer-y:                     1.7rem;
+$card-spacer-x:                     1.7rem;
+$card-text-spacer-y:                1rem;
+$card-title-spacer-y:               0;
+$card-border-radius:                0;
+$card-transition: all .3s ease-in-out;
+
+.card {
+  --#{$prefix}card-bg:   #{$card-bg};
+  --#{$prefix}card-height: #{$card-height}; 
+  --#{$prefix}card-spacer-y: #{$card-spacer-y}; 
+  --#{$prefix}card-spacer-x: #{$card-spacer-x};
+  --#{$prefix}card-title-spacer-y: #{$card-title-spacer-y};
+  --#{$prefix}card-text-spacer-y: #{$card-text-spacer-y};
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; // See https://github.com/twbs/bootstrap/pull/22740#issuecomment-305868106
+  height: var(--#{$prefix}card-height);
+  word-wrap: break-word;
+  background-color: var(--#{$prefix}card-bg);
+  background-clip: border-box;
+  @include transition($card-transition);
+  @extend .text-decoration-none;
+  &:hover{
+    transform: translate(-5px,-5px);
+  }
+}
+
+  .card-body {
+    // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+    // as much space as possible, ensuring footers are aligned to the bottom.
+    flex: 1 1 auto;
+    padding: var(--#{$prefix}card-spacer-y) var(--#{$prefix}card-spacer-x);
+    color: var(--#{$prefix}card-color);
+  }
+
+  .card-date{
+    @extend
+      .text-secondary,
+      .fw-bold;
+      font-size: .7em;
+  }
+  
+  .card-title {
+    margin-bottom: var(--#{$prefix}card-title-spacer-y);
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .card-text{
+    margin-top: var(--#{$prefix}card-text-spacer-y);
+    margin-bottom: var(--#{$prefix}card-text-spacer-y);
+    font-size: .9rem;
+  }
+
+  .text-light{
+    color: #a7a7a7;
+  }
+  
+  .card-text:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-link {
+    @extend .d-inline-flex,
+            .align-items-center,
+            .text-secondary,
+            .text-uppercase,
+            .fw-bold,
+            .text-decoration-none,
+            .text-uppercase;
+    letter-spacing: -1px;
+    font-size: .7rem;
+    svg{
+      width: 12px;
+      height: 12px;
+      margin-left: 5px;
+
+    }
+    &:hover {
+      @extend .text-decoration-none;
+    }
+
+    + .card-link {
+      margin-left: var(--#{$prefix}card-spacer-x);
+    }
+  }
+
+.card-primary{
+  box-shadow: -8px 12px $primary, 0 0 40px -13px #5628774d;
+  &:hover{
+    box-shadow: -12px 16px $primary, 0 0 40px -13px #5628774d;
+  }
+  .card-title {
+    @extend .text-primary;
+  }
+}
+
+.card-secondary{
+  box-shadow: -8px 12px $secondary, 0 0 40px -13px #5628774d;
+  &:hover{
+    box-shadow: -12px 16px $secondary, 0 0 40px -13px #5628774d;
+  }
+  .card-title {
+    @extend .text-secondary;
+  }
+}
+
+.card-third{
+  box-shadow: -8px 12px $third, 0 0 40px -13px #5628774d;
+  &:hover{
+    box-shadow: -12px 16px $third, 0 0 40px -13px #5628774d;
+  }
+  .card-title {
+    @extend .text-third;
+  }
+}

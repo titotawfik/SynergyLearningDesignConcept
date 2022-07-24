@@ -1,0 +1,62 @@
+.carousel-component{
+    @include media-breakpoint-up(xl) {
+        padding-top: 5.5rem;
+    }
+    .slide-item__bg{
+        @include media-breakpoint-up(lg){
+            background-size: inherit;
+        }
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center; 
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+
+    .slide-item__content{
+        @include media-breakpoint-up(xl) {
+            padding-right: 3rem;
+
+            &--title{
+                font-size: 2.3rem;
+            }
+            &--desc{
+                font-size: .9rem;
+            }
+        }
+    }
+
+    .slick-slider-dots{
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    
+        li {
+            margin: 0 10px;
+            display: flex;
+            button {
+                background: $forth; 
+                height:10px;
+                width:10px;
+                overflow: hidden;
+                color: $white;
+                border: none;
+                border-radius: 50%;
+                text-indent: -9999px;
+                padding:0;
+                margin:0;
+            }
+            &.slick-active {
+                button {
+                    background: $primary;
+                    color: $primary;
+                }
+            }
+        }
+    }
+}

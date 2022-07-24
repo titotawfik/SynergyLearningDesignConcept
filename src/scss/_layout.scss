@@ -1,0 +1,116 @@
+body{
+    margin:0;
+    padding:0;
+}
+.main-content{
+
+    @include media-breakpoint-up(md) {
+        background-position: right -90px;
+        background-size: inherit;
+        background-image: url(../svgs/backdrop-right.svg);
+        background-repeat: no-repeat;
+    }
+
+   
+}
+
+img{
+    @include img-fluid();
+}
+
+.btn{
+    background-image: url(../svgs/button-pattern.svg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 42px 42px;
+    line-height: 22px;
+    padding-right: 3.5rem;
+    border-width: 0;
+}
+
+.navbar{
+    padding-top: 0;
+    padding-bottom:0;
+
+    .nav-link{
+        border-bottom: 3px solid $white;
+        &:hover{
+            border-bottom: $nav-link-hover-border;
+        }
+    }
+}
+
+.navbar-brand{
+    padding: 0;
+    @include media-breakpoint-down(md) {
+        position: relative;
+        margin: auto;
+    }
+    img{
+        width: 65px;
+    }
+}
+
+.navbar{
+    background-color: #fff!important;
+    box-shadow: 0 10px 25px -16px rgba(0, 0, 0, 0.2);
+}
+
+
+//footer
+.nav-footer{
+
+    a{
+        padding-left: 0.9rem;
+        padding-right:0.9rem;
+        padding-bottom: .5rem;
+        padding-top: 0;
+        font-size: .9rem;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-social{
+    ul{
+        margin-bottom: 0;
+        li{
+            padding: 20px;
+        }
+    }
+    svg{
+        width:40px;
+        height: 30px;
+        fill: $primary;
+        @include transition(fill, .4s, ease);
+        &:hover {
+           fill: $secondary;
+        }
+
+    }
+}
+
+.footer-text{
+    p{
+        margin: 0;
+    }
+}
+
+.mb-7{
+    margin-bottom: 7rem;
+}
+.py-6{
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.py-7{
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+}
+.components-container {
+    @include media-breakpoint-up(xl) {
+        max-width: 1048px;
+    }
+}
