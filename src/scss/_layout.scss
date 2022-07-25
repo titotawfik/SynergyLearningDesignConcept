@@ -7,8 +7,6 @@
         background-image: url(../svgs/backdrop-right.svg);
         background-repeat: no-repeat;
     }
-
-   
 }
 
 img{
@@ -52,7 +50,6 @@ img{
     background-color: #fff!important;
     box-shadow: 0 10px 25px -16px rgba(0, 0, 0, 0.2);
 }
-
 
 //footer
 .footer-info{
@@ -100,16 +97,9 @@ img{
 }
 
 .mb-7{
-    margin-bottom: 7rem;
+    margin-bottom: 7rem; 
 }
-.py-6{
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-}
-.py-7{
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-}
+
 .components-container {
     @include media-breakpoint-up(xl) {
         max-width: 1048px;
