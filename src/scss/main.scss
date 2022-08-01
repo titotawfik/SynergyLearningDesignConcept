@@ -11,14 +11,16 @@
 //---------------------------------------------
 // 1. Basics
 //---------------------------------------------
-@import "variables"; 
-@import "bootstrap"; 
+@import "variables";
+
+@import "bootstrap";
+
 //---------------------------------------------
 // 2. Page Layout
-//---------------------------------------------
-@import "layout"; 
+@import "layout";
+
 //-------------------------------------------
 // 3. Components
-//---------------------------------------------
-@import "carousel"; 
-@import "card";    
+@import "carousel";
+
+@import "card";

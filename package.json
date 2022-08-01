@@ -8,13 +8,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch ./src/scss/main.scss --output-style compressed -o ./src/css",
-    "sprite": "svg-sprite -s --symbol-dest src/svgs/sprite --symbol-sprite sprite.svg src/svgs/sprite/*.svg"
+    "sprite": "svg-sprite -s --symbol-dest src/svgs/sprite --symbol-sprite sprite.svg src/svgs/sprite/*.svg",
+    "css-lint": "stylelint src/scss/"
   },
   "dependencies": {
     "bootstrap": "^5.2.0",
     "node-sass": "^7.0.1"
   },
   "devDependencies": {
+    "stylelint": "^14.9.1",
+    "stylelint-config-twbs-bootstrap": "^5.0.0",
     "svg-sprite": "^1.5.4"
   }
 }

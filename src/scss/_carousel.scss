@@ -1,62 +1,64 @@
 .carousel-component{
-    @include media-breakpoint-up(xl) {
-        padding-top: 5.5rem;
+  @include media-breakpoint-up(xl) {
+    padding-top: 5.5rem;
+  }
+
+  .slide-item{
+    &__bg{
+      position: relative;
+      padding-bottom: 56.25%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      @include media-breakpoint-up(lg){
+        background-size: inherit;
+      }
     }
-    .slide-item__bg{
-        @include media-breakpoint-up(lg){
-            background-size: inherit;
+
+    &__content{
+      @include media-breakpoint-up(xl) {
+        padding-right: 3rem;
+        &--title{
+          font-size: 2.3rem;
         }
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center; 
-        padding-bottom: 56.25%;
-        position: relative;
-    }
-
-    .slide-item__content{
-        @include media-breakpoint-up(xl) {
-            padding-right: 3rem;
-
-            &--title{
-                font-size: 2.3rem;
-            }
-            &--desc{
-                font-size: .9rem;
-            }
+        &--desc{
+          font-size: .9rem;
         }
+      }
     }
+  }
 
-    .slick-slider-dots{
-        position: absolute;
-        bottom: -50px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        list-style: none;
-        margin: 0;
+  .slick-slider-dots{
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transform: translateX(-50%);
+    li {
+      display: flex;
+      margin: 0 10px;
+      button {
+        width: 10px;
+        height: 10px;
         padding: 0;
-    
-        li {
-            margin: 0 10px;
-            display: flex;
-            button {
-                background: $forth; 
-                height:10px;
-                width:10px;
-                overflow: hidden;
-                color: $white;
-                border: none;
-                border-radius: 50%;
-                text-indent: -9999px;
-                padding:0;
-                margin:0;
-            }
-            &.slick-active {
-                button {
-                    background: $primary;
-                    color: $primary;
-                }
-            }
+        margin: 0;
+        overflow: hidden;
+        color: $white;
+        text-indent: -9999px;
+        background: $forth;
+        border: none;
+        border-radius: 50%;
+      }
+
+      &.slick-active {
+        button {
+          color: $primary;
+          background: $primary;
         }
+      }
     }
+  }
 }
